@@ -11,7 +11,10 @@ const mongoose_connection = require("./db/connection");
 const patient_router = require("./router/patient");
 const doctor = require("./model/doctor");
 const app = express();
-app.use(cors({credentials: true, origin: true}));
+app.use(cors({
+    // origin:
+    credentials: true,
+     origin: true}));
 mongoose_connection(app);
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
